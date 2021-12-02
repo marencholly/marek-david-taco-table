@@ -1,0 +1,258 @@
+/* This is my main CSS style document */
+
+/* CSS Reset */
+
+* {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    box-sizing:border-box;
+}
+
+header, nav, main, section, article, footer {
+    display:block;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+    display: inline-block;
+}
+
+img {
+    width:25%;
+}
+
+/* Global Styles */
+
+body {
+    font-family: "Oxygen", sans-serif;
+    background-color: #003049;
+    color: #cac4ce;
+    text-align: center;
+}
+
+/* Header Styles */
+
+header {
+    background-color: #59114d;
+    color: #e98a15;
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.toggle-button {
+    display: none;
+}
+
+/* Nav Styles */
+
+nav {
+    background-color: #59114d;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+}
+
+.nav-link {
+    color: #e98a15;
+    font-size: 1.2rem;
+    padding:1rem 3rem;
+    /* margin-block is the same as margin-top and margin-bottom */
+    /* margin-inline is the same as margin-left and margin-right */
+    /* this is assuming the direction of content is left to right */
+    /* if direction is changed to top to bottom, margin-block and margin-inline will switch places */
+    transition: color 500ms ease-in-out, background-color 500ms ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ebb36f;
+    background-color: #4b063f;
+}
+
+/* Section Styles */
+
+section {
+    padding: 1rem 10%;
+}
+
+section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.section-flex {
+    display: flex;
+    align-items: center;
+}
+
+.left-flex {
+    width: 30%;
+    margin: 0 1rem;
+}
+
+.right-flex {
+    width: 70%;
+    margin: 0 1rem;
+}
+
+.section-flex img {
+    width: 100%;
+}
+
+article {
+    margin: 0.5rem 0;
+}
+
+.flex img {
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+img {
+    border-radius:2rem;
+    pointer-events: none;
+}
+
+.cta-button {
+    font-size: 1.2rem;
+    color: #e98a15;
+    padding: 0.5rem;
+    border: 0.1875rem solid #e98a15;
+    border-radius: 2rem;
+    margin: 1rem auto;
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #e98a15;
+    color: #003049;
+}
+
+/* Table Styles */
+
+table {
+    width: 80%;
+    margin: 1rem auto;
+    border: 2px solid #e98a15;
+}
+
+caption{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+th,td {
+    padding: 0.5rem 0;
+}
+
+th:hover,
+td:hover {
+    color: #e98a15;
+}
+
+/* Logo Styles */
+
+.logo {
+    width: 20%;
+}
+
+.logo-image {
+    width: 100%;
+}
+
+.heading {
+    width: 80%;
+}
+
+/* Utility Classes */
+
+.red-font {
+    color: red;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.reverse-flex {
+    flex-direction: row-reverse;
+}
+
+/* Media Queries */
+@media screen and (max-width: 426px) {
+    /* any CSS rule in here will only effect devices with screens smaller than 426px */
+    h1 {
+        font-size: 1rem;
+    }
+
+    header h2 {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        padding: 0.5rem;
+        width: 25%;
+    }
+
+    .header {
+        width: 75%;
+    }
+
+    nav {
+        height: 0;
+        overflow: hidden;
+        transition: height 500ms ease-in-out;
+    }
+
+    .visible {
+        height: 100vh;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+
+    .section-flex {
+        flex-direction: column;
+    }
+
+    .left-flex,
+    .right-flex {
+        width: 100%;
+        margin: 0;
+    }
+
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+        padding: 0 2rem;
+        font-size: 2rem;
+    }
+}
